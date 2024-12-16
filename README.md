@@ -8,17 +8,15 @@
 
 ## 2. 📖 프로젝트 개요
 
-- **📌 목적**: 기업 요구사항에 맞춘 온라인 서점 시스템 개발 및 포트폴리오 활용
+- **📌 목적**: Spring과 MyBatis를 활용하여 Community 프로젝트에 대한 이해와 학습
 - **🎯 주요 목표**:
-  - ✅ 참여기업 요구사항 지시에 맞춘 각 시스템별 기능 구현
-  - ✅ 유저 / 관리자 SIDE별 기능 제공
-  - ✅ **회원가입, 로그인, 내정보 수정 기능**  
-    (Google, Naver, Kakao 등 Synchro 로그인)
-  - ✅ 장바구니, 구매기록 기능
-  - ✅ **배송비 시스템** (주문/교환/반품 - 무료 / 조건부 무료)
-  - ✅ 결제 및 조회 기능 (PG사 연동)
-  - ✅ 적립금 시스템
-  - ✅ **상품 및 게시판 등록 및 관리** (리뷰, 공지사항 등)
+  - ✅ Spring의 기본 셋팅에 대한 이해
+  - ✅ Spring Security의 이해와 사용
+  - ✅ MyBatis의 활용
+  - ✅ Apache Tiles를 활용하여 페이지 분할
+  - ✅ 사용자 / 관리자 등급 별 기능 분할
+  - ✅ 한개의 커뮤니티가 아닌 갤러리형, 목록형, 기사형의 커뮤티니 생성 및 관리
+  - ✅ 페이징과 검색에 대한 이해
 
 ---
 
@@ -26,7 +24,7 @@
 
 ### 🛠️ 개발 도구
 
-![Eclipse]
+![Eclipse Ide](https://img.shields.io/badge/eclipseide-2C2255?logo=eclipseide&logoColor=white)
 
 ### 🎨 프론트엔드
 
@@ -38,62 +36,46 @@
 
 ### 🗄️ 데이터베이스
 
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white) ![AWS RDS](https://img.shields.io/badge/AWS%20RDS-232F3E?logo=amazonaws&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
 
 ### 🤝 협업 도구
 
-![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white) ![figma](https://img.shields.io/badge/figma-F24E1E?logo=figma&logoColor=black) ![googlesheets](https://img.shields.io/badge/googlesheets-34A853?logo=googlesheets&logoColor=white) ![googlecloud](https://img.shields.io/badge/googlecloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)
 
 ### ⚙️ 기타 도구
 
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?logo=jenkins&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) ![PostMan](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=Postman&logoColor=white) ![kakao](https://img.shields.io/badge/kakao%20API-FFCD00?style=flat-square&logo=kakao&logoColor=black) ![naver](https://img.shields.io/badge/naver%20API-03C75A?style=flat-square&logo=naver&logoColor=white) ![google](https://img.shields.io/badge/google%20API-4285F4?style=flat-square&logo=google&logoColor=white) ![dotenv](https://img.shields.io/badge/dotenv-ECD53F?logo=dotenv&logoColor=black)
-
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
 ---
 
-## 5. 📜 주요 기능 설명
+## 4. 📜 주요 기능 설명
 
 ### 💻 사용자 페이지
 
 - 🔑 **회원가입 및 로그인**
-  - 일반 회원가입 및 소셜 로그인 지원 (Google, Naver, Kakao)
-- 👩‍🦲 **마이 페이지**
-  - 나의 정보, 주문 내역, 문의 내역으로 효율적인 정보 관리 가능
-- 🛒 **장바구니**
-  - 상품의 구매와 찜 기능을 한 페이지로 효율적으로 관리
-- 📜 **카테고리 분류**
-  - 헤더의 navigation기능으로 효율적인 상품 조회 가능
+  - 로컬 회원가입 지원
+- 📜 **게시글 작성과 읽기**
+  - 다양한 게시판에서 게시글 작성과 댓글 작성 기능
 - 🔍 **검색 기능**
-  - 통합,제목,작가,ISBN,출판사 검색을 통해 세분화된 검색과 다시 결과내 재검색을 통해 효율적인 검색 기능 구현
-- ✋ **고객센터**
-  - 공지사항, FAQ, 문의하기, 이용약관을 고객센터 탭을 통해 상세한 내용 확인가능
-- 💰 **적립금 시스템**
-  - 상품 구매 및 이벤트 참여 시 적립금 지급
-  - 일정 적립금 이상 시 구매에 사용 가능
+  - 각 게시판에서 다양한 검색을 지원 (제목, 내용, 작성자 등)
 
 ### 🛠 관리자 페이지
 
-- 📊 **관리자 페이지 대쉬보드**
-  - 주문, 회원, 매출, 문의, Todolist, 실적, 현황 그래프를 통해 전반적인 정보 확인 가능
-- 🧑 **회원 관리**
-  - 회원 등급별 조회 시스템, 검색기능, 일괄 등급 변경기능, 회원 삭제기능으로 효율적인 관리 제공
-- 📦 **도서 등록 및 관리**
-  - 도서 조회 및 관리, 카테고리 관리를 분리하여 효율적인 도서 및 카테고리 관리 기능 제공
-- 💳 **주문 관리(주문, 결제, 배송)**
-  - 상세 필터를 통해 효율적 검색가능, 선택된 상품을 일괄적으로 상태 변경 가능
+- 📊 **게시판 관리 대시보드**
+  - 모든 게시판의 설정 상태를 한눈에 볼 수 있는 대시보드 기능
 - 📝 **게시판 관리**
-  - 공지사항 ,이벤트, 리뷰, Q&A를 통해 게시물의 추가 삭제를 관리함
+  - 다양한 게시판을 등록하고 관리하는 기능 (카테고리, 파일 제한 등의 다양한 세부 설정 기능)
 
 ---
 
-## 8. 📊 ERD
+## 5. 📊 ERD
 
 | ERD | 이미지                            |
 | --- | --------------------------------- |
-| ERD | ![ERD](./read.me.image/00erd.png) |
+| ERD | ![ERD](./readme_image/erd.png) |
 
 ---
 
-## 9. 🖼️ 화면 예시
+## 6. 🖼️ 화면 예시
 
 | 화면 설명                         | 이미지                                                                  | 설명                                                                        |
 | --------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------- |
